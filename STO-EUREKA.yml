@@ -4,10 +4,11 @@ server:
   
 # Credenciales de seguridad 
 spring:
-  security:
-    user:
-      name: adminEureka
-      password: stoEureka
+ profiles: DES
+ security:
+   user:
+     name: adminEureka
+     password: stoEureka
 
 # Configuración de Eureka  
 eureka:
