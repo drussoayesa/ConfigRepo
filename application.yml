@@ -24,10 +24,6 @@ server:
   
 config:
  eureka:
-  security:
-   user:
-    name: adminEureka
-    password: stoEureka
   endpoint:
    backautenticacion: STO-BACK-AUTENTICACION
  endpoint:
