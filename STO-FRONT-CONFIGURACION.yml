@@ -21,3 +21,4 @@ eureka:
 config:
  connecttimeout: 60000
  readtimeout: 3000
+
