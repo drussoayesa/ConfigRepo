@@ -23,6 +23,9 @@ server:
   include-stacktrace: never
   
 config:
+ eureka:
+  endpoint:
+   backautenticacion: STO-BACK-AUTENTICACION
  endpoint:
   backautenticacion: http://localhost:9020
   backadministracion: STO-BACK-ADMINISTRACION
