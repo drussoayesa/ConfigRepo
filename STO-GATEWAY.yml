@@ -1,0 +1,42 @@
+server:
+ port: 9002
+ 
+# Discovery Server Access  
+eureka:
+ instance:
+  hostname: localhost
+  virtualHostName: STO-GATEWAY
+  metadataMap:
+   appOwner: STO
+   description: Gateway de STO
+ client:
+  registerWithEureka: true
+  fetch-registry: true
+
+zuul:
+ host:
+  connect-timeout-millis: 50000
+  socket-timeout-millis: 50000
+ sensitiveHeaders: Cookie,Set-Cookie
+ routes:
+  administracion:
+   path: /administracion/**
+   serviceId: STO-BACK-ADMINISTRACION
+  configuracion:
+   path: /configuracion/**
+   serviceId: STO-BACK-CONFIGURACION
+   
+ribbon:
+   ReadTimeout: 60000
+   connection-timeout: 3000
+   eureka:
+      enabled: true
+        
+# Propiedades para actuator info
+info:
+  app:
+    name: STO-GATEWAY
+    description: Gateway de STO
+    version: 0.0.1-SNAPSHOT
+  java-vendor: ${java.specification.vendor}
+  java-version: ${java.vm.name}
