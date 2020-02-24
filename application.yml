@@ -21,9 +21,22 @@ security:
 server:
  error:
   include-stacktrace: never
-  
+ 
+ 
+ # Credenciales de seguridad 
+spring:
+  security:
+    user:
+      name: adminEureka
+      password: stoEureka
+ 
+ 
 config:
  eureka:
+  security:
+   user:
+    name: adminEureka
+    password: stoEureka
   endpoint:
    backautenticacion: STO-BACK-AUTENTICACION
  endpoint:
