@@ -1,18 +1,32 @@
-#Puerto por defecto
+# Puerto por defecto de Eureka
 server:
   port: 8761
   
+# Credenciales de seguridad 
+spring:
+  security:
+    user:
+      name: adminEureka
+      password: stoEureka
+
+# Configuración de Eureka  
 eureka:
   instance:
     hostname: localhost
   client:
     register-with-eureka: false
     fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
     healthcheck: 
       enabled: true
       
+# Configuración de logging        
 logging:
   level:
+    org:
+      springframework:
+        security: DEBUG
     com:
       netflix:
         eureka: OFF
