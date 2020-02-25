@@ -23,7 +23,7 @@ logging:
   level:
     org:
       springframework:
-        security: DEBUG
+        security: ERROR
     com:
       netflix:
         eureka: OFF
