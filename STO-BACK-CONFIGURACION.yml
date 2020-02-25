@@ -31,11 +31,16 @@ config:
 eureka:
  instance:
   hostname: localhost
+  user:
+      name: adminEureka
+      password: stoEureka
   metadata-map:
    appOwner: STO
    description: Back de configuracion
   virtual-host-name: STO-BACK-CONFIGURACION    
  client:
+   serviceUrl:
+      defaultZone: http://${eureka.instance.user.name}:${eureka.instance.user.password}@${eureka.instance.hostname}:8761/eureka/
    healthcheck: 
       enabled: false 
       
