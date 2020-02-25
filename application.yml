@@ -27,13 +27,13 @@ config:
   endpoint:
    backautenticacion: STO-BACK-AUTENTICACION
  endpoint:
-  backautenticacion: http://localhost:9020
+  backautenticacion: http://172.18.3.124:9020
   backadministracion: STO-BACK-ADMINISTRACION
   frontadministracion: STO-FRONT-ADMINISTRACION
   frontautenticacion: STO-FRONT-AUTENTICACION
   frontconfiguracion: STO-FRONT-CONFIGURACION
   backconfiguracion: STO-BACK-CONFIGURACION
-  eureka: http://localhost:8761
+  eureka: http://172.18.3.124:8761
   gateway: STO-GATEWAY
   
 eureka:
