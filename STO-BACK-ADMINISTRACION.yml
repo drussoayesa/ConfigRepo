@@ -24,3 +24,32 @@ eureka:
   metadataMap:
    appOwner: STO
    description: API de administración del STO
+
+---
+
+server:
+ port: 8080
+ 
+spring:
+ profiles: LOCAL
+ h2:
+  console:
+   path: /h2-console
+ datasource:
+  url: jdbc:h2:mem:testDb;DB_CLOSE_DELAY=-1
+  username: sa
+  password:  
+  driver-class-name: org.h2.Driver
+ data:
+  rest:
+   base-path: /api
+ application:
+  name: STO-BACK-ADMINISTRACION
+  
+eureka:
+ instance:    
+  preferIpAddress: true
+  virtualHostName: STO-BACK-ADMINISTRACION
+  metadataMap:
+   appOwner: STO
+   description: API de administración del STO
