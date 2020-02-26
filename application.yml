@@ -43,7 +43,7 @@ eureka:
   healthcheck:
    enabled: true
 
----------
+---
 
 spring:
  profiles: LOCAL
