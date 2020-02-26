@@ -30,7 +30,8 @@ config:
 # Configuración eureka
 eureka:
  instance:
-  hostname: localhost
+  preferIpAddress: true
+#  hostname: localhost
   user:
       name: adminEureka
       password: stoEureka
