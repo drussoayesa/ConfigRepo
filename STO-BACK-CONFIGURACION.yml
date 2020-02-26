@@ -31,7 +31,7 @@ config:
 eureka:
  instance:
   preferIpAddress: true
-#  hostname: localhost
+  hostname: localhost
   user:
       name: adminEureka
       password: stoEureka
