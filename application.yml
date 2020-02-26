@@ -6,7 +6,7 @@ spring:
  datasource:
   sqlScriptEncoding: UTF-8
   
- config:
+config:
  eureka:
   endpoint:
    gateway: STO-GATEWAY
