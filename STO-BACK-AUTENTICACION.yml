@@ -18,6 +18,13 @@ jwt:
   token:
    signing-key: 1234
    
+config:
+ seguridad:
+   redirectUri:
+    frontAutenticacion: http://172.18.3.124:8082
+    frontAdministracion: http://172.18.3.124:8083
+    frontConfiguracion: http://172.18.3.124:8889
+    
 eureka:
  instance:
   preferIpAddress: true
