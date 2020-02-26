@@ -18,7 +18,8 @@ spring:
   name: STO-BACK-ADMINISTRACION
   
 eureka:
- instance:
+ instance:    
+  preferIpAddress: true
   virtualHostName: STO-BACK-ADMINISTRACION
   metadataMap:
    appOwner: STO
