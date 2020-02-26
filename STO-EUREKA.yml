@@ -29,3 +29,38 @@ logging:
       netflix:
         eureka: OFF
         discovery: OFF
+        
+---
+
+# Puerto por defecto de Eureka
+server:
+  port: 8761
+  
+# Credenciales de seguridad 
+spring:
+ profiles: LOCAL
+ security:
+   user:
+     name: adminEureka
+     password: stoEureka
+
+# Configuración de Eureka  
+eureka:
+  instance:
+#    hostname: localhost
+    preferIpAddress: true
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+      
+# Configuración de logging        
+logging:
+  level:
+    org:
+      springframework:
+        security: ERROR
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF
+
