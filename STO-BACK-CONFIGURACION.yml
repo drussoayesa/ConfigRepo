@@ -35,6 +35,7 @@ eureka:
  instance:
   preferIpAddress: true
   hostname: localhost
+  port: 8761
   user:
       name: adminEureka
       password: stoEureka
@@ -44,7 +45,7 @@ eureka:
   virtual-host-name: STO-BACK-CONFIGURACION    
  client:
    serviceUrl:
-      defaultZone: http://${eureka.instance.user.name}:${eureka.instance.user.password}@${eureka.instance.hostname}:8761/eureka/
+      defaultZone: http://${eureka.instance.user.name}:${eureka.instance.user.password}@${eureka.instance.hostname}:${eureka.instance.port}/eureka/
    healthcheck: 
       enabled: false 
       
@@ -97,6 +98,7 @@ eureka:
  instance:
   preferIpAddress: true
   hostname: localhost
+  port: 8761
   user:
       name: adminEureka
       password: stoEureka
@@ -106,7 +108,7 @@ eureka:
   virtual-host-name: STO-BACK-CONFIGURACION    
  client:
    serviceUrl:
-      defaultZone: http://${eureka.instance.user.name}:${eureka.instance.user.password}@${eureka.instance.hostname}:8761/eureka/
+      defaultZone: http://${eureka.instance.user.name}:${eureka.instance.user.password}@${eureka.instance.hostname}:${eureka.instance.port}/eureka/
    healthcheck: 
       enabled: false 
       
