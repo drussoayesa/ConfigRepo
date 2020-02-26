@@ -42,3 +42,50 @@ eureka:
  client:
   healthcheck:
    enabled: true
+
+---------
+
+spring:
+ profiles: LOCAL
+ datasource:
+  sqlScriptEncoding: UTF-8
+ 
+#Configuraciones de seguridad
+security:
+ basic:
+  enabled: false
+ oauth2:
+  client:
+   clientId: fooClientId
+   clientSecret: secret
+   accessTokenUri: ${config.endpoint.backautenticacion}/auth/oauth/token
+   userAuthorizationUri: ${config.endpoint.backautenticacion}/auth/oauth/authorize
+  resource:
+   userInfoUri: ${config.endpoint.backautenticacion}/auth/user/me
+   jwt:
+    key-value: 1234
+  
+server:
+ error:
+  include-stacktrace: never
+  
+config:
+ eureka:
+  endpoint:
+   backautenticacion: STO-BACK-AUTENTICACION
+ endpoint:
+  backautenticacion: http://localhost:9020
+  backadministracion: STO-BACK-ADMINISTRACION
+  frontadministracion: STO-FRONT-ADMINISTRACION
+  frontautenticacion: STO-FRONT-AUTENTICACION
+  frontconfiguracion: STO-FRONT-CONFIGURACION
+  backconfiguracion: STO-BACK-CONFIGURACION
+  eureka: http://localhost:8761
+  gateway: STO-GATEWAY
+  
+eureka:
+ instance:
+  initialStatus: UNKNOWN
+ client:
+  healthcheck:
+   enabled: true
