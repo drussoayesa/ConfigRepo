@@ -5,6 +5,18 @@ spring:
  profiles: DES
  datasource:
   sqlScriptEncoding: UTF-8
+  
+ config:
+ eureka:
+  endpoint:
+   gateway: STO-GATEWAY
+   backautenticacion: STO-BACK-AUTENTICACION
+   backadministracion: STO-BACK-ADMINISTRACION
+   frontautenticacion: STO-FRONT-AUTENTICACION
+   frontadministracion: STO-FRONT-ADMINISTRACION
+   frontconfiguracion: STO-FRONT-CONFIGURACION
+ endpoint:
+  backautenticacion: http://172.18.3.124:9020
  
 #Configuraciones de seguridad
 security:
@@ -24,20 +36,6 @@ security:
 server:
  error:
   include-stacktrace: never
-  
-config:
- eureka:
-  endpoint:
-   backautenticacion: STO-BACK-AUTENTICACION
- endpoint:
-  backautenticacion: http://172.18.3.124:9020
-  backadministracion: STO-BACK-ADMINISTRACION
-  frontadministracion: STO-FRONT-ADMINISTRACION
-  frontautenticacion: STO-FRONT-AUTENTICACION
-  frontconfiguracion: STO-FRONT-CONFIGURACION
-  backconfiguracion: STO-BACK-CONFIGURACION
-  eureka: http://172.18.3.124:8761
-  gateway: STO-GATEWAY
   
 eureka:
  instance:
@@ -55,6 +53,18 @@ spring:
  datasource:
   sqlScriptEncoding: UTF-8
  
+config:
+ eureka:
+  endpoint:
+   gateway: STO-GATEWAY
+   backautenticacion: STO-BACK-AUTENTICACION
+   backadministracion: STO-BACK-ADMINISTRACION
+   frontautenticacion: STO-FRONT-AUTENTICACION
+   frontadministracion: STO-FRONT-ADMINISTRACION
+   frontconfiguracion: STO-FRONT-CONFIGURACION
+ endpoint:
+  backautenticacion: http://localhost:9020 
+ 
 #Configuraciones de seguridad
 security:
  basic:
@@ -73,20 +83,6 @@ security:
 server:
  error:
   include-stacktrace: never
-  
-config:
- eureka:
-  endpoint:
-   backautenticacion: STO-BACK-AUTENTICACION
- endpoint:
-  backautenticacion: http://localhost:9020
-  backadministracion: STO-BACK-ADMINISTRACION
-  frontadministracion: STO-FRONT-ADMINISTRACION
-  frontautenticacion: STO-FRONT-AUTENTICACION
-  frontconfiguracion: STO-FRONT-CONFIGURACION
-  backconfiguracion: STO-BACK-CONFIGURACION
-  eureka: http://localhost:8761
-  gateway: STO-GATEWAY
   
 eureka:
  instance:
