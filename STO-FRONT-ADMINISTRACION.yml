@@ -1,3 +1,4 @@
+# Entorno del servidor de DESarrollo
 server:
  port: 8083
  servlet:
@@ -21,6 +22,7 @@ eureka:
 
 ---
 
+# Entorno para desarrollo local
 server:
  port: 8083
  servlet:
