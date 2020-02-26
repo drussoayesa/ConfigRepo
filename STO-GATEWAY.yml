@@ -4,7 +4,7 @@ server:
 # Discovery Server Access  
 eureka:
  instance:
-  hostname: localhost
+#  hostname: localhost
   virtualHostName: STO-GATEWAY
   metadataMap:
    appOwner: STO
