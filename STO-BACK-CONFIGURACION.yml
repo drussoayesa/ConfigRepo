@@ -1,3 +1,4 @@
+# Entorno del servidor de DESarrollo
 server:
  port: 8888
 
@@ -57,6 +58,7 @@ info:
   
 ---
 
+# Entorno para desarrollo local
 server:
  port: 8888
 
