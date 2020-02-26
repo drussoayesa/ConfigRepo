@@ -6,6 +6,7 @@ eureka:
  instance:
 #  hostname: localhost
   virtualHostName: STO-GATEWAY
+  preferIpAddress: true
   metadataMap:
    appOwner: STO
    description: Gateway de STO
