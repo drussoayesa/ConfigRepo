@@ -101,7 +101,7 @@ eureka:
   port: 8761
   user:
       name: adminEureka
-      password: stoEureka
+      password: '{cipher}b7bba42abdc3d7c12046b9a4f87ab3eeff8d711127edebabd800cc54171f614d'
   metadata-map:
    appOwner: STO
    description: Back de configuracion
