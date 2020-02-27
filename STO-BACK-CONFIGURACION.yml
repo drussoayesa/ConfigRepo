@@ -98,7 +98,7 @@ eureka:
       password: '{cipher}b7bba42abdc3d7c12046b9a4f87ab3eeff8d711127edebabd800cc54171f614d'
   metadata-map:
    user: adminConfig
-   password: stoConfig
+   password: '{cipher}5a8139e0e2589ab8f2006aeeec9c2552bed7d9a340ea79a9f94dd4e99fad747c'
    appOwner: STO
    description: Back de configuracion
   virtual-host-name: STO-BACK-CONFIGURACION    
