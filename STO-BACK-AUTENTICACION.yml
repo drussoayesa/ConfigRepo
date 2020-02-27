@@ -58,7 +58,7 @@ jwt:
   authorizedGrantTypes: password,authorization_code,refresh_token
   refreshTokenValiditySeconds: 240
   token:
-   signing-key: 1234
+   signing-key: '{cipher}63c159452c1099e88f1f681da4e1ac5352bb3cfc43225f3d73bb629c5166b4f6'
    
 config:
  seguridad:
