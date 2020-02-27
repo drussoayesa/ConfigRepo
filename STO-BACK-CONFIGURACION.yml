@@ -21,9 +21,6 @@ spring:
   driver-class-name: org.h2.Driver
   sqlScriptEncoding: UTF-8
 
-# Seguridad
-security.oauth2.resource.jwt.key-value: 1234
-
 # Configuración general
 config:
  general:
@@ -83,9 +80,6 @@ spring:
   password: 
   driver-class-name: org.h2.Driver
   sqlScriptEncoding: UTF-8
-
-# Seguridad
-security.oauth2.resource.jwt.key-value: '{cipher}63c159452c1099e88f1f681da4e1ac5352bb3cfc43225f3d73bb629c5166b4f6'
 
 # Configuración general
 config:
