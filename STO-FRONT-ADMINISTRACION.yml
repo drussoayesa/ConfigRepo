@@ -43,7 +43,7 @@ spring:
 eureka:
  instance:
   virtualHostName: STO-FRONT-ADMINISTRACION
-  preferIpAddress: true
+#  preferIpAddress: true
   metadataMap:
    appOwner: STO
    description: Front de administración  
