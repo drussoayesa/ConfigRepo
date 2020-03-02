@@ -45,7 +45,7 @@ spring:
   
 eureka:
  instance:
-  preferIpAddress: true
+#  preferIpAddress: true
   virtualHostName: STO-FRONT-CONFIGURACION
   metadataMap:
    appOwner: STO
