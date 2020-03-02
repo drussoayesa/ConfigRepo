@@ -57,8 +57,8 @@ spring:
 # Configuración de Eureka  
 eureka:
   instance:
-#    hostname: localhost
-    preferIpAddress: true
+    hostname: localhost
+#    preferIpAddress: true
   client:
     register-with-eureka: false
     fetch-registry: false
