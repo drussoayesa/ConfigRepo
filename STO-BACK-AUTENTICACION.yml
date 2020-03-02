@@ -69,7 +69,7 @@ config:
     
 eureka:
  instance:
-  preferIpAddress: true
+#  preferIpAddress: true
   virtualHostName: STO-BACK-AUTENTICACION
   metadataMap:
    appOwner: STO
