@@ -14,9 +14,6 @@ spring:
   username: sa
   password:  
   driver-class-name: org.h2.Driver
- data:
-  rest:
-   base-path: /api
  application:
   name: STO-BACK-ADMINISTRACION
   
@@ -46,9 +43,6 @@ spring:
   username: sa
   password:  
   driver-class-name: org.h2.Driver
- data:
-  rest:
-   base-path: /api
  application:
   name: STO-BACK-ADMINISTRACION
   
