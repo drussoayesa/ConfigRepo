@@ -47,6 +47,15 @@ server:
   
 spring:
  profiles: LOCAL
+ h2:
+  console:
+   path: /h2-console
+ datasource:
+  url: jdbc:h2:mem:authDb;DB_CLOSE_DELAY=-1
+  username: sa
+  password:  
+  driver-class-name: org.h2.Driver
+  sqlScriptEncoding: UTF-8
  application:
   name: STO-BACK-AUTENTICACION
   
