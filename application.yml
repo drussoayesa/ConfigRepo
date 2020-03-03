@@ -10,7 +10,7 @@ config:
  eureka:
   endpoint:
    gateway: STO-GATEWAY
-   backautenticacion: STO-BACK-AUTENTICACION
+   backautenticacion: http://172.18.3.124:9020
    backadministracion: STO-BACK-ADMINISTRACION
    frontautenticacion: STO-FRONT-AUTENTICACION
    frontadministracion: STO-FRONT-ADMINISTRACION
