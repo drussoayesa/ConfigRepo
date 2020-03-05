@@ -58,15 +58,6 @@ spring:
   sqlScriptEncoding: UTF-8
  application:
   name: STO-BACK-AUTENTICACION
- 
-# Configuraciones de seguridad
-#security:
-# oauth2:
-#  resource:
-#   userInfoUri: ${config.endpoint.backautenticacion}/auth/user/me
-#   preferTokenInfo: false
-#   jwt:
-#    key-value: '{cipher}63c159452c1099e88f1f681da4e1ac5352bb3cfc43225f3d73bb629c5166b4f6'
   
 jwt:
  autenticacion:
