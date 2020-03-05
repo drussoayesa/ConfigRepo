@@ -20,8 +20,8 @@ config:
  
 #Configuraciones de seguridad
 security:
- basic:
-  enabled: false
+# basic:
+#  enabled: false
  oauth2:
   client:
    clientId: fooClientId
@@ -30,6 +30,7 @@ security:
    userAuthorizationUri: ${config.endpoint.backautenticacion}/auth/oauth/authorize
   resource:
    userInfoUri: ${config.endpoint.backautenticacion}/auth/user/me
+   preferTokenInfo: false
    jwt:
     key-value: 1234
   
