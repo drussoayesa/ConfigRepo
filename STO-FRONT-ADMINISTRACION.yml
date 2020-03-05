@@ -48,7 +48,7 @@ eureka:
    appOwner: STO
    description: Front de administración  
 
-#Configuraciones de seguridad
+# Configuraciones de seguridad
 security:
  oauth2:
   client:
