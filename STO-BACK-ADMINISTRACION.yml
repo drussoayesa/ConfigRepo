@@ -50,6 +50,8 @@ spring:
   name: STO-BACK-ADMINISTRACION
  jpa:
   database: default
+  hibernate:
+   ddl-auto: update
   
 eureka:
  instance:    
