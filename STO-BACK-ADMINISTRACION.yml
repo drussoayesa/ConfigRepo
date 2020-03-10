@@ -48,6 +48,8 @@ spring:
   sqlScriptEncoding: UTF-8
  application:
   name: STO-BACK-ADMINISTRACION
+ jpa:
+  database: default
   
 eureka:
  instance:    
@@ -71,5 +73,3 @@ oldsto.datasource.url: jdbc:sqlserver://sqlsae2005.sadiel.es:1433;databaseName=B
 oldsto.datasource.username: CEM_PRO_STO
 oldsto.datasource.password: jkxcvjx34897534hjsdfh4
 oldsto.datasource.driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-
-spring.jpa.database: default
