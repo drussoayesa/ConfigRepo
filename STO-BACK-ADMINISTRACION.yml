@@ -48,10 +48,10 @@ spring:
   sqlScriptEncoding: UTF-8
  application:
   name: STO-BACK-ADMINISTRACION
- jpa:
-  database: default
-  hibernate:
-   ddl-auto: update
+# jpa:
+#  database: default
+#  hibernate:
+#   ddl-auto: update
   
 eureka:
  instance:    
