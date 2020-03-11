@@ -72,6 +72,7 @@ security:
     key-value: '{cipher}63c159452c1099e88f1f681da4e1ac5352bb3cfc43225f3d73bb629c5166b4f6'
 
 # SqlServer DB - "OLD STO"
+oldsto.datasource.url: jdbc:sqlserver://sqlsae2005.sadiel.es:1433;databaseName=BDSTO
 oldsto.datasource.jdbcUrl: jdbc:sqlserver://sqlsae2005.sadiel.es:1433;databaseName=BDSTO
 oldsto.datasource.username: CEM_PRO_STO
 oldsto.datasource.password: jkxcvjx34897534hjsdfh4
