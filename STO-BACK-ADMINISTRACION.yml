@@ -74,4 +74,4 @@ security:
 oldsto.datasource.url: jdbc:sqlserver://sqlsae2005.sadiel.es:1433;databaseName=BDSTO
 oldsto.datasource.username: CEM_PRO_STO
 oldsto.datasource.password: jkxcvjx34897534hjsdfh4
-oldsto.datasource.driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+oldsto.datasource.driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
