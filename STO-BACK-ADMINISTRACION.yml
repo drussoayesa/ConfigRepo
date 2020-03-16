@@ -48,6 +48,7 @@ spring:
 #  password: sto
 #  driver-class-name: oracle.jdbc.OracleDriver
   url: jdbc:h2:mem:testDb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+  jdbcUrl: jdbc:h2:mem:testDb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
   username: sa
   password: 
   driver-class-name: org.h2.Driver
