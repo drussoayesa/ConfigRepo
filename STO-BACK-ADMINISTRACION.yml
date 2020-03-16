@@ -37,16 +37,16 @@ server:
  
 spring:
  profiles: LOCAL
- h2:
-  console:
-   path: /h2-console
+# h2:
+#  console:
+#   path: /h2-console
 #   enabled: false
  datasource:
-  url: jdbc:h2:mem:testDb;DB_CLOSE_DELAY=-1
-  jdbcUrl: jdbc:h2:mem:testDb;DB_CLOSE_DELAY=-1
-  username: sa
-  password:  
-  driver-class-name: org.h2.Driver
+  url: jdbc:oracle:thin:@172.18.1.33:1521:cartuja4
+  jdbcUrl: jdbc:oracle:thin:@172.18.1.33:1521:cartuja4
+  username: sto
+  password: sto
+  driver-class-name: oracle.jdbc.OracleDriver
   sqlScriptEncoding: UTF-8
  application:
   name: STO-BACK-ADMINISTRACION
