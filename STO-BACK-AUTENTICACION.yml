@@ -54,10 +54,10 @@ spring:
   console:
    path: /h2-console
  datasource:
-  url: jdbc:h2:mem:authDb;DB_CLOSE_DELAY=-1
-  username: sa
-  password:  
-  driver-class-name: org.h2.Driver
+  url: jdbc:oracle:thin:@172.18.1.33:1521:cartuja4
+  username: sto
+  password: sto
+  driver-class-name: oracle.jdbc.OracleDriver
   sqlScriptEncoding: UTF-8
  application:
   name: STO-BACK-AUTENTICACION
