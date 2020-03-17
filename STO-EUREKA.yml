@@ -46,6 +46,9 @@ logging:
 server:
   port: 8761
   
+logging:
+ file: D:/desarrollo/logs/eureka.log
+  
 # Credenciales de seguridad 
 spring:
  profiles: LOCAL
