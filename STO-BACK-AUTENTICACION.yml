@@ -45,6 +45,9 @@ server:
  servlet:
   context-path: /auth
   
+logging:
+ file: D:/desarrollo/logs/autenticacion-back.log
+  
 spring:
  profiles: LOCAL
  h2:
