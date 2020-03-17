@@ -77,38 +77,3 @@ eureka:
  client:
   healthcheck:
    enabled: true
-   
----
-################################################################################################################################
-# Entorno para desarrollo ORACLE
-################################################################################################################################
-spring:
- profiles: ORACLE
- datasource:
-  sqlScriptEncoding: UTF-8
- 
-config:
- eureka:
-  endpoint:
-   gateway: STO-GATEWAY
-   backautenticacion: STO-BACK-AUTENTICACION
-   backadministracion: STO-BACK-ADMINISTRACION
-   frontautenticacion: STO-FRONT-AUTENTICACION
-   frontadministracion: STO-FRONT-ADMINISTRACION
-   frontconfiguracion: STO-FRONT-CONFIGURACION
- endpoint:
-  backautenticacion: http://localhost:9020
- persistence:
-  database: SQLSERVER_ORACLE
-  
-server:
- error:
-  include-stacktrace: never
-  
-eureka:
- instance:
-  initialStatus: UNKNOWN
- client:
-  healthcheck:
-   enabled: true
-
