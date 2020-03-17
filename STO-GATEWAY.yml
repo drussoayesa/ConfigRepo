@@ -56,6 +56,9 @@ info:
 server:
  port: 9002
  
+logging:
+ file: D:/desarrollo/logs/gateway.log
+ 
 spring:
  profiles: LOCAL
  
