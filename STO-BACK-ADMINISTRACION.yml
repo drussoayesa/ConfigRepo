@@ -35,6 +35,9 @@ eureka:
 server:
  port: 8080
  
+logging:
+ file: D:/desarrollo/logs/administracion-back.log
+ 
 spring:
  profiles: LOCAL
  h2:
