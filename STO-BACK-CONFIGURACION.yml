@@ -63,6 +63,9 @@ info:
 ################################################################################################################################
 server:
  port: 8888
+ 
+logging:
+ file: D:/desarrollo/logs/configuracion-back.log
 
 spring:
  profiles: LOCAL
