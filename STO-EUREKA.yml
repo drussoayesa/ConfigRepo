@@ -45,10 +45,7 @@ logging:
 # Puerto por defecto de Eureka
 server:
   port: 8761
-  
-logging:
- file: D:/desarrollo/logs/eureka.log
-  
+   
 # Credenciales de seguridad 
 spring:
  profiles: LOCAL
@@ -68,6 +65,7 @@ eureka:
       
 # Configuración de logging        
 logging:
+  file: D:/desarrollo/logs/eureka.log
   level:
     org:
       springframework:
