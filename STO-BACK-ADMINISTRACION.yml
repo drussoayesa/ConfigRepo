@@ -9,9 +9,6 @@ logging:
  
 spring:
  profiles: DES
- h2:
-  console:
-   path: /h2-console
  datasource:
   url: jdbc:oracle:thin:@172.18.1.33:1521:cartuja4
   jdbcUrl: jdbc:oracle:thin:@172.18.1.33:1521:cartuja4
