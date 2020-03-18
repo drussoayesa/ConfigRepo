@@ -29,7 +29,7 @@ eureka:
 security:
  oauth2:
   client:
-   clientId: stoAuthClient
+   clientId: stoAuthClientDes
    clientSecret: '{cipher}015d9f900e42352c30a084c8a5c8dd9860909876a31f8b0cb2b19e545d065cc8'
    accessTokenUri: ${config.endpoint.backautenticacion}/auth/oauth/token
    userAuthorizationUri: ${config.endpoint.backautenticacion}/auth/oauth/authorize
@@ -73,7 +73,7 @@ eureka:
 security:
  oauth2:
   client:
-   clientId: stoAuthClient
+   clientId: stoAuthClientLocal
    clientSecret: '{cipher}015d9f900e42352c30a084c8a5c8dd9860909876a31f8b0cb2b19e545d065cc8'
    accessTokenUri: ${config.endpoint.backautenticacion}/auth/oauth/token
    userAuthorizationUri: ${config.endpoint.backautenticacion}/auth/oauth/authorize
