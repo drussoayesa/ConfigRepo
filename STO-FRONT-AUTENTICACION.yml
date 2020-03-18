@@ -8,6 +8,9 @@ server:
  session:
   cookie:
    name: UISESSION
+   
+logging:
+ file: D:/desarrollo/logs/autenticacion-front.log
 
 spring:
  profiles: DES
