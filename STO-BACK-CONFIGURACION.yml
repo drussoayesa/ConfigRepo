@@ -11,10 +11,6 @@ spring:
  profiles: DES
  application:
   name: STO-BACK-CONFIGURACION
- h2:
-  console:
-   enabled: true
-   path: /h2-console
  jpa:
   show-sql: true
  datasource:
