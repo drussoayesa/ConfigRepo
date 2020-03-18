@@ -16,7 +16,7 @@ config:
    frontadministracion: STO-FRONT-ADMINISTRACION
    frontconfiguracion: STO-FRONT-CONFIGURACION
  endpoint:
-  backautenticacion: http://localhost:9020
+  backautenticacion: http://172.18.3.124:9020
  persistence:
   database: SQLSERVER_ORACLE
   
