@@ -10,28 +10,15 @@ config:
  eureka:
   endpoint:
    gateway: STO-GATEWAY
-   backautenticacion: http://172.18.3.124:9020
+   backautenticacion: STO-BACK-AUTENTICACION
    backadministracion: STO-BACK-ADMINISTRACION
    frontautenticacion: STO-FRONT-AUTENTICACION
    frontadministracion: STO-FRONT-ADMINISTRACION
    frontconfiguracion: STO-FRONT-CONFIGURACION
  endpoint:
-  backautenticacion: http://172.18.3.124:9020
- 
-#Configuraciones de seguridad
-security:
- basic:
-  enabled: false
- oauth2:
-  client:
-   clientId: fooClientId
-   clientSecret: secret
-   accessTokenUri: ${config.endpoint.backautenticacion}/auth/oauth/token
-   userAuthorizationUri: ${config.endpoint.backautenticacion}/auth/oauth/authorize
-  resource:
-   userInfoUri: ${config.endpoint.backautenticacion}/auth/user/me
-   jwt:
-    key-value: 1234
+  backautenticacion: http://localhost:9020
+ persistence:
+  database: SQLSERVER_ORACLE
   
 server:
  error:
@@ -77,38 +64,3 @@ eureka:
  client:
   healthcheck:
    enabled: true
-
----
-################################################################################################################################
-# Entorno para desarrollo ORACLE
-################################################################################################################################
-spring:
- profiles: ORACLE
- datasource:
-  sqlScriptEncoding: UTF-8
- 
-config:
- eureka:
-  endpoint:
-   gateway: STO-GATEWAY
-   backautenticacion: STO-BACK-AUTENTICACION
-   backadministracion: STO-BACK-ADMINISTRACION
-   frontautenticacion: STO-FRONT-AUTENTICACION
-   frontadministracion: STO-FRONT-ADMINISTRACION
-   frontconfiguracion: STO-FRONT-CONFIGURACION
- endpoint:
-  backautenticacion: http://localhost:9020
- persistence:
-  database: SQLSERVER_ORACLE
-  
-server:
- error:
-  include-stacktrace: never
-  
-eureka:
- instance:
-  initialStatus: UNKNOWN
- client:
-  healthcheck:
-   enabled: true
-
