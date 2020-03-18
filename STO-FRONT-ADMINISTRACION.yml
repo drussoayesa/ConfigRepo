@@ -8,6 +8,9 @@ server:
  session:
   cookie:
    name: UISESSION
+   
+logging:
+ file: D:/desarrollo/logs/administracion-front.log
 
 spring:
  profiles: DES
@@ -21,6 +24,20 @@ eureka:
   metadataMap:
    appOwner: STO
    description: Front de administración  
+   
+# Configuraciones de seguridad
+security:
+ oauth2:
+  client:
+   clientId: stoAdminClient
+   clientSecret: '{cipher}015d9f900e42352c30a084c8a5c8dd9860909876a31f8b0cb2b19e545d065cc8'
+   accessTokenUri: ${config.endpoint.backautenticacion}/auth/oauth/token
+   userAuthorizationUri: ${config.endpoint.backautenticacion}/auth/oauth/authorize
+  resource:
+   userInfoUri: ${config.endpoint.backautenticacion}/auth/user/me
+   preferTokenInfo: false
+   jwt:
+    key-value: '{cipher}63c159452c1099e88f1f681da4e1ac5352bb3cfc43225f3d73bb629c5166b4f6'
 
 ---
 
