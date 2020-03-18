@@ -55,6 +55,10 @@ spring:
   sqlScriptEncoding: UTF-8
  application:
   name: STO-BACK-AUTENTICACION
+ jpa:
+  properties:
+   hibernate:
+    dialect: org.hibernate.dialect.Oracle12cDialect
   
 jwt:
  autenticacion:
