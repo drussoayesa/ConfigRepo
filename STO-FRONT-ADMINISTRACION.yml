@@ -10,7 +10,7 @@ server:
    name: UISESSION
    
 logging:
- file: D:/desarrollo/logs/administracion-front.log
+ file: /usr/local/nuevaarquitecturasto/logs/administracion-front.log
 
 spring:
  profiles: DES
