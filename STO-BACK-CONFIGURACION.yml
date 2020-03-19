@@ -5,7 +5,7 @@ server:
  port: 8888
  
 logging:
- file: D:/desarrollo/logs/configuracion-back.log
+ file: /usr/local/nuevaarquitecturasto/logs/configuracion-back.log
 
 spring:
  profiles: DES
