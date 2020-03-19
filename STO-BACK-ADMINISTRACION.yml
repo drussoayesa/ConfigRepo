@@ -82,7 +82,7 @@ security:
     
 general:
  persistence:
-  batabase: SQLSERVER_ORACLE
+  database: SQLSERVER_ORACLE
 
 # SqlServer DB - "OLD STO"
 oldsto.datasource.url: jdbc:sqlserver://sqlsae2005.sadiel.es:1433;databaseName=BDSTO_TEST
