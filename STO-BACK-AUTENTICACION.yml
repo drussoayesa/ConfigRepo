@@ -7,7 +7,7 @@ server:
   context-path: /auth
   
 logging:
- file: D:/desarrollo/logs/autenticacion-back.log
+ file: /usr/local/nuevaarquitecturasto/logs/autenticacion-back.log
   
 spring:
  profiles: DES
