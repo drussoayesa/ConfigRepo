@@ -5,7 +5,7 @@ server:
  port: 9002
  
 logging:
- file: D:/desarrollo/logs/gateway.log
+ file: /usr/local/nuevaarquitecturasto/logs/gateway.log
  
 spring:
  profiles: DES
