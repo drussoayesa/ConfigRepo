@@ -5,7 +5,7 @@ server:
  port: 8080
  
 logging:
- file: D:/desarrollo/logs/administracion-back.log
+ file: /usr/local/nuevaarquitecturasto/logs/administracion-back.log
  
 spring:
  profiles: DES
