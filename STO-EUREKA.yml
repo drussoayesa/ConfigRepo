@@ -37,8 +37,6 @@ logging:
         discovery: OFF
         
 ---
-
-
 ################################################################################################################################
 # Entorno para desarrollo LOCAL
 ################################################################################################################################
@@ -67,6 +65,45 @@ eureka:
 # Configuración de logging        
 logging:
   file: D:/desarrollo/logs/eureka.log
+  level:
+    org:
+      springframework:
+        security: ERROR
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF
+
+
+---
+################################################################################################################################
+# Entorno del servidor de WEBLOGIC
+################################################################################################################################
+
+# Puerto por defecto de Eureka
+server:
+  port: 8761
+  
+# Credenciales de seguridad 
+spring:
+ profiles: WEBLOGIC
+ security:
+   user:
+     name: adminEureka
+     password: '{cipher}b7bba42abdc3d7c12046b9a4f87ab3eeff8d711127edebabd800cc54171f614d'
+
+# Configuración de Eureka  
+eureka:
+  instance:
+#    hostname: localhost
+    preferIpAddress: true
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+      
+# Configuración de logging        
+logging:
+  file: /usr/local/nuevaarquitecturasto/logs/eureka.log
   level:
     org:
       springframework:
