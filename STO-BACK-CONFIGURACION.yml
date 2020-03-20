@@ -34,7 +34,7 @@ config:
 eureka:
  instance:
   preferIpAddress: true
-  hostname: http://192.168.1.63 #localhost
+  hostname: 192.168.1.63 #localhost
   port: 8761
   user:
    name: adminEureka
