@@ -1,12 +1,8 @@
 ################################################################################################################################
 # Entorno del servidor de DESarrollo
 ################################################################################################################################
-#server:
-# port: 8888
 server:
- port: 7001
- servlet:
-  context-path: /configsto
+ port: 8888
  
 logging:
  file: /usr/local/nuevaarquitecturasto/logs/configuracion-back.log
