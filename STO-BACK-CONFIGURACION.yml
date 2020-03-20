@@ -1,8 +1,12 @@
 ################################################################################################################################
 # Entorno del servidor de DESarrollo
 ################################################################################################################################
+#server:
+# port: 8888
 server:
- port: 8888
+ port: 7001
+ servlet:
+  context-path: /configsto
  
 logging:
  file: /usr/local/nuevaarquitecturasto/logs/configuracion-back.log
@@ -34,7 +38,7 @@ config:
 eureka:
  instance:
   preferIpAddress: true
-  hostname: 192.168.1.63 #localhost
+  hostname: localhost
   port: 8761
   user:
    name: adminEureka
@@ -146,7 +150,7 @@ info:
 # Pruebas con weblogic
 ################################################################################################################################
 server:
-# port: 8888
+ port: 7001
  servlet:
   context-path: /configsto
  
