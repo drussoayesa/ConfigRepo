@@ -180,7 +180,7 @@ config:
 eureka:
  instance:
   preferIpAddress: true
-  hostname: 172.18.3.124
+  hostname: 172.18.3.124/eureka
   port: 7001
   user:
    name: adminEureka
