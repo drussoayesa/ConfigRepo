@@ -82,7 +82,9 @@ logging:
 
 # Puerto por defecto de Eureka
 server:
-  port: 8761
+  port: 7001
+  servlet:
+   context-path: /eureka
   
 # Credenciales de seguridad 
 spring:
