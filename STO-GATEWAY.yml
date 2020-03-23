@@ -124,3 +124,68 @@ info:
     version: 0.0.1-SNAPSHOT
   java-vendor: ${java.specification.vendor}
   java-version: ${java.vm.name}
+
+---
+
+################################################################################################################################
+# Entorno del servidor de Weblogic
+################################################################################################################################
+server:
+ port: 7001
+ 
+logging:
+ file: /usr/local/nuevaarquitecturasto/logs/gateway.log
+ 
+spring:
+ profiles: WEBLOGIC
+ 
+# Discovery Server Access  
+eureka:
+ instance:
+#  hostname: localhost
+  virtualHostName: STO-GATEWAY
+  preferIpAddress: true
+  metadataMap:
+   appOwner: STO
+   description: Gateway de STO
+ client:
+  registerWithEureka: true
+  fetch-registry: true
+
+# Configuraciones de seguridad
+security:
+ oauth2:
+  resource:
+   userInfoUri: ${config.endpoint.backautenticacion}/auth/user/me
+   preferTokenInfo: false
+   jwt:
+    key-value: '{cipher}63c159452c1099e88f1f681da4e1ac5352bb3cfc43225f3d73bb629c5166b4f6'
+
+
+zuul:
+ host:
+  connect-timeout-millis: 50000
+  socket-timeout-millis: 50000
+ sensitiveHeaders: Cookie,Set-Cookie
+ routes:
+  administracion:
+   path: ${general.config.pathsgateway.backadministracion}/**
+   serviceId: STO-BACK-ADMINISTRACION
+  configuracion:
+   path: ${general.config.pathsgateway.backconfiguracion}/**
+   serviceId: STO-BACK-CONFIGURACION
+   
+ribbon:
+   ReadTimeout: 60000
+   connection-timeout: 3000
+   eureka:
+      enabled: true
+        
+# Propiedades para actuator info
+info:
+  app:
+    name: STO-GATEWAY
+    description: Gateway de STO
+    version: 0.0.1-SNAPSHOT
+  java-vendor: ${java.specification.vendor}
+  java-version: ${java.vm.name}
