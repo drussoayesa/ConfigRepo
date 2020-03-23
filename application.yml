@@ -85,7 +85,7 @@ config:
    frontadministracion: STO-FRONT-ADMINISTRACION
    frontconfiguracion: STO-FRONT-CONFIGURACION
  endpoint:
-  backautenticacion: http://172.18.3.124:7001/auth
+  backautenticacion: http://172.18.3.124:7001/authsto
  persistence:
   database: SQLSERVER_ORACLE
   
