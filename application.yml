@@ -93,6 +93,12 @@ server:
  error:
   include-stacktrace: never
   
+general:
+ config:
+  pathsgateway:
+   backconfiguracion: /configuracionsto
+   backadministracion: /administracionsto
+  
 eureka:
  instance:
   initialStatus: UNKNOWN
