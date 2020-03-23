@@ -181,7 +181,7 @@ eureka:
  instance:
   preferIpAddress: true
   hostname: 172.18.3.124
-  port: 8761
+  port: 7001
   user:
    name: adminEureka
    password: '{cipher}b7bba42abdc3d7c12046b9a4f87ab3eeff8d711127edebabd800cc54171f614d'
