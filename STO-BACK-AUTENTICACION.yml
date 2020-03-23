@@ -80,7 +80,7 @@ eureka:
 # Entorno del servidor de DESarrollo
 ################################################################################################################################
 server:
- port: 9020
+ port: 7001
  servlet:
   context-path: /auth
   
