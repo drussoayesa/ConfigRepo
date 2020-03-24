@@ -91,6 +91,8 @@ oldsto.datasource.username: CEM_PRO_STO
 oldsto.datasource.password: jkxcvjx34897534hjsdfh4
 oldsto.datasource.driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
 
+---
+
 ################################################################################################################################
 # Entorno del servidor de Weblogic
 ################################################################################################################################
