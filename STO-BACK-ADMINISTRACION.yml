@@ -98,6 +98,8 @@ oldsto.datasource.driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
 ################################################################################################################################
 server:
  port: 7001
+ servlet:
+  context-path: /administracionsto
  
 logging:
  file: /usr/local/nuevaarquitecturasto/logs/administracion-back.log
