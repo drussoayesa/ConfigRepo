@@ -132,6 +132,8 @@ info:
 ################################################################################################################################
 server:
  port: 7001
+ servlet:
+  context-path: /stogateway
  
 logging:
  file: /usr/local/nuevaarquitecturasto/logs/gateway.log
