@@ -133,7 +133,7 @@ info:
 server:
  port: 7001
  servlet:
-  context-path: /stogateway
+  context-path: ${config.server.context-paths.sto-gateway}
  
 logging:
  file: /usr/local/nuevaarquitecturasto/logs/gateway.log
@@ -148,6 +148,7 @@ eureka:
   virtualHostName: STO-GATEWAY
   preferIpAddress: true
   metadataMap:
+   configPath: ${config.server.context-paths.sto-gateway}
    appOwner: STO
    description: Gateway de STO
  client:
@@ -158,7 +159,7 @@ eureka:
 security:
  oauth2:
   resource:
-   userInfoUri: ${config.endpoint.backautenticacion}/auth/user/me
+   userInfoUri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/user/me
    preferTokenInfo: false
    jwt:
     key-value: '{cipher}63c159452c1099e88f1f681da4e1ac5352bb3cfc43225f3d73bb629c5166b4f6'
@@ -171,10 +172,10 @@ zuul:
  sensitiveHeaders: Cookie,Set-Cookie
  routes:
   administracion:
-   path: ${general.config.pathsgateway.backadministracion}/**
+   path: ${config.server.context-paths.sto-back-administracion}/**
    serviceId: STO-BACK-ADMINISTRACION
   configuracion:
-   path: ${general.config.pathsgateway.backconfiguracion}/**
+   path: ${config.server.context-paths.sto-back-configuracion}/**
    serviceId: STO-BACK-CONFIGURACION
    
 ribbon:
