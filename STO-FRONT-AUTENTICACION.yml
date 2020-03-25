@@ -110,6 +110,7 @@ eureka:
   preferIpAddress: true
   virtualHostName: STO-FRONT-AUTENTICACION
   metadataMap:
+   configPath: /stofrontautenticacion
    appOwner: STO
    description: Front de autenticación del STO
    
