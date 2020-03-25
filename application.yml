@@ -86,18 +86,22 @@ config:
    frontconfiguracion: STO-FRONT-CONFIGURACION
  endpoint:
   backautenticacion: http://172.18.3.124:7001
+ server:
+  context-paths:
+   sto-front-configuracion: /sto-front-configuracion
+   sto-front-autenticacion: /sto-front-autenticacion
+   sto-gateway: /sto-gateway
+   sto-front-administracion: /sto-front-administracion
+   sto-eureka: /sto-eureka
+   sto-back-configuracion: /sto-back-configuracion
+   sto-back-autenticacion: /sto-back-autenticacion
+   sto-back-administracion: /sto-back-administracion
  persistence:
   database: SQLSERVER_ORACLE
   
 server:
  error:
   include-stacktrace: never
-  
-general:
- config:
-  pathsgateway:
-   backconfiguracion: /configuracionsto
-   backadministracion: /administracionsto
   
 eureka:
  instance:
