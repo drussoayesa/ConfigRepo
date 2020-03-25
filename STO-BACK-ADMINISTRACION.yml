@@ -121,6 +121,7 @@ eureka:
   preferIpAddress: true
   virtualHostName: STO-BACK-ADMINISTRACION
   metadataMap:
+   configPath: /administracionsto
    appOwner: STO
    description: API de administración del STO
 
