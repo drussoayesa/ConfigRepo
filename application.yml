@@ -85,7 +85,8 @@ config:
    frontadministracion: STO-FRONT-ADMINISTRACION
    frontconfiguracion: STO-FRONT-CONFIGURACION
  endpoint:
-  backautenticacion: http://172.18.3.124:7001
+  #backautenticacion: http://172.18.3.124:7001
+  backautenticacion: http://172.28.6.163:7001
  server:
   context-paths:
    sto-front-configuracion: /sto-front-configuracion
