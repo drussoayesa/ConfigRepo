@@ -82,7 +82,7 @@ eureka:
 server:
  port: 7001
  servlet:
-  context-path: ${general.config.server.context-paths.sto-back-autenticacion}
+  context-path: ${config.server.context-paths.sto-back-autenticacion}
   
 logging:
  file: /usr/local/nuevaarquitecturasto/logs/autenticacion-back.log
@@ -108,6 +108,6 @@ eureka:
   preferIpAddress: true
   virtualHostName: STO-BACK-AUTENTICACION
   metadataMap:
-   configPath: ${general.config.server.context-paths.sto-back-autenticacion}
+   configPath: ${config.server.context-paths.sto-back-autenticacion}
    appOwner: STO
    description: API de autenticación del STO
