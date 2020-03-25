@@ -84,7 +84,7 @@ logging:
 server:
   port: 7001
   servlet:
-   context-path: ${general.config.server.context-paths.sto-eureka}
+   context-path: ${config.server.context-paths.sto-eureka}
   
 # Credenciales de seguridad 
 spring:
