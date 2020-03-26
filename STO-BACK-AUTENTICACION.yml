@@ -111,3 +111,39 @@ eureka:
    configPath: ${config.server.context-paths.sto-back-autenticacion}
    appOwner: STO
    description: API de autenticación del STO
+
+################################################################################################################################
+# Entorno del servidor de TOMCAT
+################################################################################################################################
+server:
+ port: 8001
+ servlet:
+  context-path: ${config.server.context-paths.sto-back-autenticacion}
+  
+logging:
+ file: /usr/local/nuevaarquitecturasto/logs/autenticacion-back.log
+  
+spring:
+ profiles: TOMCAT
+ datasource:
+  url: jdbc:oracle:thin:@172.18.1.33:1521:cartuja4
+  username: sto
+  password: sto
+  driver-class-name: oracle.jdbc.OracleDriver
+  sqlScriptEncoding: UTF-8
+ application:
+  name: STO-BACK-AUTENTICACION
+  
+jwt:
+ autenticacion:
+  token:
+   signing-key: '{cipher}63c159452c1099e88f1f681da4e1ac5352bb3cfc43225f3d73bb629c5166b4f6'
+    
+eureka:
+ instance:
+  preferIpAddress: true
+  virtualHostName: STO-BACK-AUTENTICACION
+  metadataMap:
+   configPath: ${config.server.context-paths.sto-back-autenticacion}
+   appOwner: STO
+   description: API de autenticación del STO
