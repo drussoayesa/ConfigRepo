@@ -86,7 +86,51 @@ config:
    frontconfiguracion: STO-FRONT-CONFIGURACION
  endpoint:
   backautenticacion: http://172.18.3.124:7001
-  #backautenticacion: http://172.28.6.163:7001
+ server:
+  context-paths:
+   sto-front-configuracion: /sto-front-configuracion
+   sto-front-autenticacion: /sto-front-autenticacion
+   sto-gateway: /sto-gateway
+   sto-front-administracion: /sto-front-administracion
+   sto-eureka: /sto-eureka
+   sto-back-configuracion: /sto-back-configuracion
+   sto-back-autenticacion: /sto-back-autenticacion
+   sto-back-administracion: /sto-back-administracion
+ persistence:
+  database: SQLSERVER_ORACLE
+  
+server:
+ error:
+  include-stacktrace: never
+  
+eureka:
+ instance:
+  initialStatus: UNKNOWN
+ client:
+  healthcheck:
+   enabled: true
+   
+---
+
+################################################################################################################################
+# Entorno para desarrollo WEBLOGIC
+################################################################################################################################
+spring:
+ profiles: TOMCAT
+ datasource:
+  sqlScriptEncoding: UTF-8
+ 
+config:
+ eureka:
+  endpoint:
+   gateway: STO-GATEWAY
+   backautenticacion: STO-BACK-AUTENTICACION
+   backadministracion: STO-BACK-ADMINISTRACION
+   frontautenticacion: STO-FRONT-AUTENTICACION
+   frontadministracion: STO-FRONT-ADMINISTRACION
+   frontconfiguracion: STO-FRONT-CONFIGURACION
+ endpoint:
+  backautenticacion: http://172.18.3.124:7001
  server:
   context-paths:
    sto-front-configuracion: /sto-front-configuracion
