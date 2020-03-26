@@ -99,7 +99,7 @@ logging:
  file: /usr/local/nuevaarquitecturasto/logs/administracion-front.log
 
 spring:
- profiles: DES
+ profiles: WEBLOGIC
  application:
   name: STO-FRONT-ADMINISTRACION
   
