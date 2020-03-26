@@ -136,3 +136,52 @@ security:
    preferTokenInfo: false
    jwt:
     key-value: '{cipher}63c159452c1099e88f1f681da4e1ac5352bb3cfc43225f3d73bb629c5166b4f6'
+    
+
+---
+
+################################################################################################################################
+# Entorno del servidor TOMCAT
+################################################################################################################################
+server:
+ port: 8001
+ servlet:
+  context-path: ${config.server.context-paths.sto-front-configuracion}
+ session:
+  cookie:
+   name: UISESSION
+   
+logging:
+ file: /usr/local/nuevaarquitecturasto/logs/configuracion-front.log
+   
+spring:
+ profiles: TOMCAT
+ application:
+  name: STO-FRONT-CONFIGURACION
+  
+eureka:
+ instance:
+  preferIpAddress: true
+  virtualHostName: STO-FRONT-CONFIGURACION
+  metadataMap:
+   configPath: ${config.server.context-paths.sto-front-configuracion}
+   appOwner: STO
+   description: Front de configuración del STO
+   
+config:
+ connecttimeout: 60000
+ readtimeout: 3000
+ 
+# Configuraciones de seguridad
+security:
+ oauth2:
+  client:
+   clientId: stoConfigClientWeblogic
+   clientSecret: '{cipher}015d9f900e42352c30a084c8a5c8dd9860909876a31f8b0cb2b19e545d065cc8'
+   accessTokenUri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/oauth/token
+   userAuthorizationUri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/oauth/authorize
+  resource:
+   userInfoUri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/user/me
+   preferTokenInfo: false
+   jwt:
+    key-value: '{cipher}63c159452c1099e88f1f681da4e1ac5352bb3cfc43225f3d73bb629c5166b4f6'
