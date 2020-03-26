@@ -106,7 +106,7 @@ logging:
  file: /usr/local/nuevaarquitecturasto/logs/configuracion-front.log
    
 spring:
- profiles: DES
+ profiles: WEBLOGIC
  application:
   name: STO-FRONT-CONFIGURACION
   
