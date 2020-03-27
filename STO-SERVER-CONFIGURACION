@@ -8,7 +8,7 @@ logging:
  file: D:/desarrollo/logs/configuracion-server.log
 
 spring:
- #profiles: LOCAL
+ profiles: LOCAL
  application:
   name: STO-SERVER-CONFIGURACION
  jpa:
