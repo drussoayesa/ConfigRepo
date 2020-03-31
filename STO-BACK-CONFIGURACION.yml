@@ -28,7 +28,9 @@ spring:
 config:
  general:
   pagesize: 10
-  state: UP
+  state: UP  
+ connecttimeout: 60000
+ readtimeout: 3000
       
 # Configuración eureka
 eureka:
@@ -101,6 +103,8 @@ config:
  general:
   pagesize: 10
   state: UP
+ connecttimeout: 60000
+ readtimeout: 3000
       
 # Configuración eureka
 eureka:
@@ -176,6 +180,8 @@ config:
  general:
   pagesize: 10
   state: UP
+ connecttimeout: 60000
+ readtimeout: 3000
       
 # Configuración eureka
 eureka:
@@ -251,6 +257,8 @@ config:
  general:
   pagesize: 10
   state: UP
+ connecttimeout: 60000
+ readtimeout: 3000
       
 # Configuración eureka
 eureka:
