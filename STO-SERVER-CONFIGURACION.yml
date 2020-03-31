@@ -48,7 +48,7 @@ eureka:
    serviceUrl:
       defaultZone: http://${eureka.instance.user.name}:${eureka.instance.user.password}@${eureka.instance.hostname}:${eureka.instance.port}/eureka/
    healthcheck:
-      enabled: false
+      enabled: true
       
 # Configuraciones de seguridad
 security:
