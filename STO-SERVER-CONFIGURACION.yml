@@ -23,6 +23,11 @@ spring:
   user:
    name: adminConfig
    password: '{cipher}5a8139e0e2589ab8f2006aeeec9c2552bed7d9a340ea79a9f94dd4e99fad747c'
+   
+# Configuración general
+config:
+ general:
+  state: UP
     
 # Configuración eureka
 eureka:
