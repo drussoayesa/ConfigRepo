@@ -12,6 +12,7 @@ config:
    gateway: STO-GATEWAY
    backautenticacion: STO-BACK-AUTENTICACION
    backadministracion: STO-BACK-ADMINISTRACION
+   backconfiguracion: STO-BACK-CONFIGURACION
    frontautenticacion: STO-FRONT-AUTENTICACION
    frontadministracion: STO-FRONT-ADMINISTRACION
    frontconfiguracion: STO-FRONT-CONFIGURACION
@@ -46,6 +47,7 @@ config:
    gateway: STO-GATEWAY
    backautenticacion: STO-BACK-AUTENTICACION
    backadministracion: STO-BACK-ADMINISTRACION
+   backconfiguracion: STO-BACK-CONFIGURACION
    frontautenticacion: STO-FRONT-AUTENTICACION
    frontadministracion: STO-FRONT-ADMINISTRACION
    frontconfiguracion: STO-FRONT-CONFIGURACION
@@ -81,6 +83,7 @@ config:
    gateway: STO-GATEWAY
    backautenticacion: STO-BACK-AUTENTICACION
    backadministracion: STO-BACK-ADMINISTRACION
+   backconfiguracion: STO-BACK-CONFIGURACION
    frontautenticacion: STO-FRONT-AUTENTICACION
    frontadministracion: STO-FRONT-ADMINISTRACION
    frontconfiguracion: STO-FRONT-CONFIGURACION
@@ -126,6 +129,7 @@ config:
    gateway: STO-GATEWAY
    backautenticacion: STO-BACK-AUTENTICACION
    backadministracion: STO-BACK-ADMINISTRACION
+   backconfiguracion: STO-BACK-CONFIGURACION
    frontautenticacion: STO-FRONT-AUTENTICACION
    frontadministracion: STO-FRONT-ADMINISTRACION
    frontconfiguracion: STO-FRONT-CONFIGURACION
