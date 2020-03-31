@@ -76,7 +76,7 @@ info:
 # Entorno para desarrollo LOCAL
 ################################################################################################################################
 server:
- port: 8888
+ port: 8887
  
 logging:
  file: D:/desarrollo/logs/configuracion-back.log
