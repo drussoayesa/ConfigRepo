@@ -76,6 +76,7 @@ spring:
  profiles: WEBLOGIC
  datasource:
   sqlScriptEncoding: UTF-8
+  max-active: 5
  
 config:
  eureka:
