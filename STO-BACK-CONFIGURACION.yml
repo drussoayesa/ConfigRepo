@@ -171,6 +171,7 @@ spring:
   password: sto
   driver-class-name: oracle.jdbc.OracleDriver
   sqlScriptEncoding: UTF-8
+  maxActive: 5
  security:
   user:
    name: adminConfig
