@@ -277,18 +277,19 @@ spring:
  profiles: LOCAL-CLOUD-GATEWAY
  cloud:
   gateway:
-   routes[0]:
-    id: STO-BACK-ADMINISTRACION
-    uri: lb://STO-BACK-ADMINISTRACION
-    predicates: Path=/administracion/**
-    filters: StripPrefix=1
-   routes[1]:
-    id: STO-BACK-CONFIGURACION
-    uri: lb://STO-BACK-CONFIGURACION
-    predicates: 
-    - Path=/configuracion/**
-    filters: 
-    - StripPrefix=1
+   routes:
+    - id: STO-BACK-ADMINISTRACION
+      uri: lb://STO-BACK-ADMINISTRACION
+      predicates: 
+      - Path=/administracion/**
+      filters: 
+      - StripPrefix=1
+    - id: STO-BACK-CONFIGURACION
+      uri: lb://STO-BACK-CONFIGURACION
+      predicates: 
+      - Path=/configuracion/**
+      filters: 
+      - StripPrefix=1
   loadbalancer:
    ribbon:
     enabled: false
