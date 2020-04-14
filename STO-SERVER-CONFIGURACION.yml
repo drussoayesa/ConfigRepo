@@ -126,9 +126,9 @@ eureka:
   virtual-host-name: STO-SERVER-CONFIGURACION
  client:
   serviceUrl:
-   defaultZone: http://adminEureka:stoEureka@http://172.18.3.124:7001/sto-eureka/eureka
+   defaultZone: http://${eureka.instance.user.name}:${eureka.instance.user.password}@${eureka.instance.hostname}:${eureka.instance.port}${config.server.context-paths.sto-eureka}/eureka/
   healthcheck:
-   enabled: true
+   enabled: false
       
 # Configuraciones de seguridad
 security:
