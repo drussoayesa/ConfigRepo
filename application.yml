@@ -60,6 +60,10 @@ server:
  error:
   include-stacktrace: never
   
+config:
+ cors:
+  origins: *
+  
 eureka:
  instance:
   initialStatus: UNKNOWN
