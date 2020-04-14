@@ -33,6 +33,7 @@ eureka:
    appOwner: STO
    description: API de autenticación del STO
    
+   
 ---
 ################################################################################################################################
 # Entorno para desarrollo LOCAL
@@ -73,6 +74,10 @@ eureka:
    appOwner: STO
    description: API de autenticación del STO
 
+config:
+ cors:
+  origins:
+   authOrigins: "*"
 
 ---
 
@@ -111,6 +116,11 @@ eureka:
    configPath: ${config.server.context-paths.sto-back-autenticacion}
    appOwner: STO
    description: API de autenticación del STO
+
+config:
+ cors:
+  origins:
+   authOrigins: "*"
 
 ---
 
