@@ -98,6 +98,7 @@ config:
    sto-front-administracion: /sto-front-administracion
    sto-eureka: /sto-eureka
    sto-back-configuracion: /sto-back-configuracion
+   sto-server-configuracion: /sto-server-configuracion
    sto-back-autenticacion: /sto-back-autenticacion
    sto-back-administracion: /sto-back-administracion
  persistence:
