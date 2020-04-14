@@ -346,8 +346,10 @@ spring:
    routes[1]:
     id: STO-BACK-CONFIGURACION
     uri: lb://STO-BACK-CONFIGURACION
-    predicates: Path=/configuracion/**
-    filters: StripPrefix=1
+    predicates: 
+    - Path=/configuracion/**
+    filters: 
+    - StripPrefix=1
 # Deshabilitar Ribbon para que use Load Balancer
   loadbalancer:
    ribbon:
