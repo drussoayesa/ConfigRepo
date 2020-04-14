@@ -332,10 +332,10 @@ server:
  
 logging:
  file: D:/desarrollo/logs/spring-cloud-gateway.log
- 
+
+# Routes y deshabilitar Ribbon para que use Load Balancer
 spring:
  profiles: LOCAL-CLOUD-GATEWAY
-# Routes
  cloud:
   gateway:
    routes[0]:
@@ -350,7 +350,6 @@ spring:
     - Path=/configuracion/**
     filters: 
     - StripPrefix=1
-# Deshabilitar Ribbon para que use Load Balancer
   loadbalancer:
    ribbon:
     enabled: false
