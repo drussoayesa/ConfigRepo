@@ -28,8 +28,6 @@ spring:
 config:
  general:
   state: UP
-  
-config:
  cors:
   origins:
    authOrigins: "*"
