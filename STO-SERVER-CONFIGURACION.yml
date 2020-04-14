@@ -28,9 +28,6 @@ spring:
 config:
  general:
   state: UP
- cors:
-  origins:
-   authOrigins: "*"
     
 # Configuración eureka
 eureka:
@@ -106,9 +103,6 @@ spring:
 config:
  general:
   state: UP
- cors:
-  origins:
-   authOrigins: "*"
     
 # Configuración eureka
 eureka:
