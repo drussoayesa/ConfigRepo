@@ -170,6 +170,7 @@ zuul:
   connect-timeout-millis: 50000
   socket-timeout-millis: 50000
  sensitiveHeaders: Cookie,Set-Cookie
+ ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
  routes:
   administracion:
    path: ${config.server.context-paths.sto-back-administracion}/**
