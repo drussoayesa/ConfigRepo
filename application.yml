@@ -160,3 +160,39 @@ eureka:
  client:
   healthcheck:
    enabled: true
+
+---
+
+################################################################################################################################
+# Entorno para desarrollo LOCAL (SPRING CLOUD GATEWAY y LOADBALANCER)
+################################################################################################################################
+spring:
+ profiles: LOCAL-CLOUD-GATEWAY
+ datasource:
+  sqlScriptEncoding: UTF-8
+ 
+config:
+ eureka:
+  endpoint:
+   gateway: STO-GATEWAY
+   backautenticacion: STO-BACK-AUTENTICACION
+   backadministracion: STO-BACK-ADMINISTRACION
+   backconfiguracion: STO-BACK-CONFIGURACION
+   frontautenticacion: STO-FRONT-AUTENTICACION
+   frontadministracion: STO-FRONT-ADMINISTRACION
+   frontconfiguracion: STO-FRONT-CONFIGURACION
+ endpoint:
+  backautenticacion: http://localhost:9020
+ persistence:
+  database: SQLSERVER_ORACLE
+  
+server:
+ error:
+  include-stacktrace: never
+  
+eureka:
+ instance:
+  initialStatus: UNKNOWN
+ client:
+  healthcheck:
+   enabled: true
