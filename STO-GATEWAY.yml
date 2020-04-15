@@ -315,7 +315,7 @@ spring:
       - Path=/configuracion/**
       filters: 
       - StripPrefix=1
-      - TokenRelay=
+      #- TokenRelay=
       - RemoveRequestHeader=Cookie
   loadbalancer:
    ribbon:
