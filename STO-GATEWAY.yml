@@ -294,6 +294,7 @@ spring:
       filters: 
       - StripPrefix=1
       - TokenRelay=
+      - RemoveRequestHeader=Cookie
   loadbalancer:
    ribbon:
     enabled: false
