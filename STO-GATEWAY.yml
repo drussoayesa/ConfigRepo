@@ -195,6 +195,12 @@ info:
   java-vendor: ${java.specification.vendor}
   java-version: ${java.vm.name}
 
+
+config:
+ cors:
+  origins:
+   zuulOrigins: "*"
+
 ---
 
 ################################################################################################################################
