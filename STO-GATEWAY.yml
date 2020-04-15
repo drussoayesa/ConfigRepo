@@ -174,11 +174,11 @@ zuul:
   administracion:
    path: ${config.server.context-paths.sto-back-administracion}/**
    serviceId: STO-BACK-ADMINISTRACION
-   stripPrefix: true
+   stripPrefix: false
   configuracion:
    path: ${config.server.context-paths.sto-back-configuracion}/**
    serviceId: STO-BACK-CONFIGURACION
-   stripPrefix: true
+   stripPrefix: false
    
 ribbon:
    ReadTimeout: 60000
