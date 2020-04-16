@@ -356,3 +356,121 @@ info:
     version: 0.1-SNAPSHOT
   java-vendor: ${java.specification.vendor}
   java-version: ${java.vm.name}
+
+---
+
+################################################################################################################################
+# Entorno del servidor de Weblogic (ZUUL y RIBBON)
+################################################################################################################################
+server:
+ port: 7001
+ servlet:
+  context-path: ${config.server.context-paths.sto-gateway}
+ 
+logging:
+ file: /usr/local/nuevaarquitecturasto/logs/spring-cloud-gateway.log
+ 
+spring:
+ profiles: WEBLOGIC-CLOUD-GATEWAY
+ autoconfigure:
+    # TODO: remove when fixed https://github.com/spring-projects/spring-security/issues/6314
+    exclude: org.springframework.boot.actuate.autoconfigure.security.reactive.ReactiveManagementWebSecurityAutoConfiguration
+ # Configuraciones de seguridad
+ security:
+  oauth2:
+   client:
+    registration:
+     gateway:
+      provider: autenticacion
+      clientId: stoGatewayClientLocal
+      clientSecret: '{cipher}015d9f900e42352c30a084c8a5c8dd9860909876a31f8b0cb2b19e545d065cc8'
+      authorization-grant-type: authorization_code
+      redirect-uri-template: "http://localhost:9002/login"
+      scope: openid,profile,email,resource.read
+    provider:
+     autenticacion:
+      authorization-uri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/oauth/authorize
+      token-uri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/oauth/token
+      user-info-uri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/user/me
+ cloud:
+  gateway:
+   routes:
+    - id: STO-BACK-ADMINISTRACION
+      uri: lb://STO-BACK-ADMINISTRACION
+      predicates: 
+      - Path=${config.server.context-paths.sto-back-administracion}/**
+      filters: 
+      - StripPrefix=1
+      - TokenRelay=
+    - id: STO-BACK-CONFIGURACION
+      uri: lb://STO-BACK-CONFIGURACION
+      predicates: 
+      - Path=${config.server.context-paths.sto-back-configuracion}/**
+      filters: 
+      - StripPrefix=1
+      - TokenRelay=
+      - RemoveRequestHeader=Cookie
+  loadbalancer:
+   ribbon:
+    enabled: false
+ 
+# Discovery Server Access  
+eureka:
+ instance:
+#  hostname: localhost
+  virtualHostName: STO-GATEWAY
+  preferIpAddress: true
+  metadataMap:
+   configPath: ${config.server.context-paths.sto-gateway}
+   appOwner: STO
+   description: Spring Cloud Gateway de STO
+ client:
+  registerWithEureka: true
+  fetch-registry: true
+
+# Configuraciones de seguridad
+#security:
+# oauth2:
+#  resource:
+#   userInfoUri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/user/me
+#   preferTokenInfo: false
+#   jwt:
+#    key-value: '{cipher}63c159452c1099e88f1f681da4e1ac5352bb3cfc43225f3d73bb629c5166b4f6'
+
+
+#zuul:
+# host:
+#  connect-timeout-millis: 50000
+#  socket-timeout-millis: 50000
+# sensitiveHeaders: Cookie,Set-Cookie
+# ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
+# routes:
+#  administracion:
+#   path: ${config.server.context-paths.sto-back-administracion}/**
+#   serviceId: STO-BACK-ADMINISTRACION
+#   stripPrefix: false
+#  configuracion:
+#   path: ${config.server.context-paths.sto-back-configuracion}/**
+#   serviceId: STO-BACK-CONFIGURACION
+#   stripPrefix: false
+#   
+#ribbon:
+#   ReadTimeout: 60000
+#   connection-timeout: 3000
+#   eureka:
+#      enabled: true
+        
+# Propiedades para actuator info
+info:
+  app:
+    name: STO-GATEWAY
+    description: Spring Cloud Gateway de STO
+    version: 0.0.1-SNAPSHOT
+  java-vendor: ${java.specification.vendor}
+  java-version: ${java.vm.name}
+
+
+config:
+ cors:
+  origins:
+   zuulOrigins: "*"
