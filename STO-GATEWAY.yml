@@ -294,7 +294,7 @@ spring:
     registration:
      gateway:
       provider: autenticacion
-      clientId: stoAdminClientLocal
+      clientId: stoGatewayClientLocal
       clientSecret: '{cipher}015d9f900e42352c30a084c8a5c8dd9860909876a31f8b0cb2b19e545d065cc8'
       authorization-grant-type: authorization_code
       redirect-uri-template: "{baseUrl}/login/oauth2/code/{registrationId}"
