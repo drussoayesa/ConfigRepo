@@ -376,22 +376,22 @@ spring:
     # TODO: remove when fixed https://github.com/spring-projects/spring-security/issues/6314
     exclude: org.springframework.boot.actuate.autoconfigure.security.reactive.ReactiveManagementWebSecurityAutoConfiguration
  # Configuraciones de seguridad
- #security:
- # oauth2:
- #  client:
- #   registration:
- #    gateway:
- #     provider: autenticacion
- #     clientId: stoGatewayClientLocal
- #     clientSecret: '{cipher}015d9f900e42352c30a084c8a5c8dd9860909876a31f8b0cb2b19e545d065cc8'
- #     authorization-grant-type: authorization_code
- #     redirect-uri-template: "http://localhost:9002/login"
- #     scope: openid,profile,email,resource.read
- #   provider:
- #    autenticacion:
- #     authorization-uri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/oauth/authorize
- #     token-uri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/oauth/token
- #     user-info-uri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/user/me
+ security:
+  oauth2:
+   client:
+    registration:
+     gateway:
+      provider: autenticacion
+      clientId: stoGatewayClientLocal
+      clientSecret: '{cipher}015d9f900e42352c30a084c8a5c8dd9860909876a31f8b0cb2b19e545d065cc8'
+      authorization-grant-type: authorization_code
+      redirect-uri-template: "http://localhost:9002/login"
+      scope: openid,profile,email,resource.read
+    provider:
+     autenticacion:
+      authorization-uri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/oauth/authorize
+      token-uri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/oauth/token
+      user-info-uri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/user/me
  cloud:
   gateway:
    routes:
@@ -436,20 +436,6 @@ eureka:
 #   preferTokenInfo: false
 #   jwt:
 #    key-value: '{cipher}63c159452c1099e88f1f681da4e1ac5352bb3cfc43225f3d73bb629c5166b4f6'
-security:
- oauth2:
-  client:
-   clientId: stoGatewayClientLocal
-   clientSecret: '{cipher}015d9f900e42352c30a084c8a5c8dd9860909876a31f8b0cb2b19e545d065cc8'
-   accessTokenUri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/oauth/token
-   userAuthorizationUri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/oauth/authorize
-   clientAuthenticationScheme: form
-  resource:
-   userInfoUri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/user/me
-   preferTokenInfo: false
-   jwt:
-    key-value: '{cipher}63c159452c1099e88f1f681da4e1ac5352bb3cfc43225f3d73bb629c5166b4f6'
-
 
 #zuul:
 # host:
