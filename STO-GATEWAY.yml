@@ -400,14 +400,14 @@ spring:
       predicates: 
       - Path=${config.server.context-paths.sto-back-administracion}/**
       filters: 
-      - StripPrefix=false
+      - StripPrefix=2
       - TokenRelay=
     - id: STO-BACK-CONFIGURACION
       uri: lb://STO-BACK-CONFIGURACION
       predicates: 
       - Path=${config.server.context-paths.sto-back-configuracion}/**
       filters: 
-      - StripPrefix=false
+      - StripPrefix=2
       - TokenRelay=
       - RemoveRequestHeader=Cookie
   loadbalancer:
