@@ -196,3 +196,51 @@ eureka:
  client:
   healthcheck:
    enabled: true
+
+---
+
+################################################################################################################################
+# Entorno para desarrollo WEBLOGIC (SPRING CLOUD GATEWAY y LOADBALANCER)
+################################################################################################################################
+spring:
+ profiles: WEBLOGIC-CLOUD-GATEWAY
+ datasource:
+  sqlScriptEncoding: UTF-8
+  max-active: 5
+ 
+config:
+ eureka:
+  endpoint:
+   gateway: STO-GATEWAY
+   backautenticacion: STO-BACK-AUTENTICACION
+   backadministracion: STO-BACK-ADMINISTRACION
+   backconfiguracion: STO-BACK-CONFIGURACION
+   frontautenticacion: STO-FRONT-AUTENTICACION
+   frontadministracion: STO-FRONT-ADMINISTRACION
+   frontconfiguracion: STO-FRONT-CONFIGURACION
+ endpoint:
+  backautenticacion: http://172.18.3.124:7001
+ server:
+  context-paths:
+   sto-front-configuracion: /sto-front-configuracion
+   sto-front-autenticacion: /sto-front-autenticacion
+   sto-gateway: /sto-gateway
+   sto-front-administracion: /sto-front-administracion
+   sto-eureka: /sto-eureka
+   sto-back-configuracion: /sto-back-configuracion
+   sto-server-configuracion: /sto-server-configuracion
+   sto-back-autenticacion: /sto-back-autenticacion
+   sto-back-administracion: /sto-back-administracion
+ persistence:
+  database: SQLSERVER_ORACLE
+  
+server:
+ error:
+  include-stacktrace: never
+  
+eureka:
+ instance:
+  initialStatus: UNKNOWN
+ client:
+  healthcheck:
+   enabled: true
