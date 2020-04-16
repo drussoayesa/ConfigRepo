@@ -401,14 +401,14 @@ spring:
       - Path=${config.server.context-paths.sto-back-administracion}/**
       filters: 
       #- StripPrefix=0
-      - TokenRelay=
+      #- TokenRelay=
     - id: STO-BACK-CONFIGURACION
       uri: lb://STO-BACK-CONFIGURACION
       predicates: 
       - Path=${config.server.context-paths.sto-back-configuracion}/**
       filters: 
-      - StripPrefix=0
-      - TokenRelay=
+      #- StripPrefix=0
+      #- TokenRelay=
       - RemoveRequestHeader=Cookie
   loadbalancer:
    ribbon:
