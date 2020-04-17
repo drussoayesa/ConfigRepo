@@ -1,0 +1,57 @@
+################################################################################################################################
+# Entorno del servidor de WEBLOGIC (SPRING CLOUD GATEWAY y LOAD BALANCER)
+################################################################################################################################
+server:
+ port: 7003 #7001
+ error:
+  include-stacktrace: never
+ 
+logging:
+ file: /usr/local/nuevaarquitecturasto/logs/spring-cloud-gateway.log
+ 
+spring:
+ profiles: WEBLOGIC-CLOUD-GATEWAY
+ cloud:
+  gateway:
+   routes:
+    - id: STO-BACK-ADMINISTRACION
+      uri: lb://STO-BACK-ADMINISTRACION
+      predicates: 
+      - Path=/sto-back-administracion/**
+      filters: 
+      #- StripPrefix=0
+      #- TokenRelay=
+    - id: STO-BACK-CONFIGURACION
+      uri: lb://STO-BACK-CONFIGURACION
+      predicates: 
+      - Path=/sto-back-configuracion/**
+      filters: 
+      #- StripPrefix=0
+      #- TokenRelay=
+      #- RemoveRequestHeader=Cookie
+  loadbalancer:
+   ribbon:
+    enabled: false
+ 
+# Discovery Server Access  
+eureka:
+ instance:
+  initialStatus: UNKNOWN
+#  hostname: localhost
+  virtualHostName: STO-CLOUD-GATEWAY
+  preferIpAddress: true
+  metadataMap:
+   appOwner: STO
+   description: Spring Cloud Gateway de STO
+ client:
+  registerWithEureka: true
+  fetch-registry: true
+        
+# Propiedades para actuator info
+info:
+  app:
+    name: STO-CLOUD-GATEWAY
+    description: Spring Cloud Gateway de STO
+    version: 0.0.1-SNAPSHOT
+  java-vendor: ${java.specification.vendor}
+  java-version: ${java.vm.name}
