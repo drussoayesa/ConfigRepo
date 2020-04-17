@@ -32,6 +32,12 @@ eureka:
   healthcheck:
    enabled: true
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
 ---
 ################################################################################################################################
 # Entorno para desarrollo LOCAL
@@ -67,6 +73,12 @@ eureka:
   healthcheck:
    enabled: true
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
 ---
 
 ################################################################################################################################
@@ -114,7 +126,13 @@ eureka:
  client:
   healthcheck:
    enabled: true
-   
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
 ---
 
 ################################################################################################################################
@@ -161,6 +179,12 @@ eureka:
   healthcheck:
    enabled: true
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
 ---
 
 ################################################################################################################################
@@ -196,7 +220,13 @@ eureka:
  client:
   healthcheck:
    enabled: true
-
+   
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
 ---
 
 ################################################################################################################################
@@ -244,3 +274,9 @@ eureka:
  client:
   healthcheck:
    enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
