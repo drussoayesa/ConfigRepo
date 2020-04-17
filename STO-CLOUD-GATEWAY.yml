@@ -73,6 +73,34 @@ spring:
  profiles: DES
  cloud:
   gateway:
+   globalcors:
+    cors-configurations:
+     '[/configuracion/**]':
+      allowedOrigins:
+       - '*'
+       - 'http://localhost:4200'
+      allowedMethods:
+       - GET
+       - POST
+       - PUT
+     '[/administracion/**]':
+      allowedOrigins:
+       - '*'
+       - 'http://localhost:4200'
+      allowedMethods:
+       - GET
+       - POST
+       - PUT
+       - DELETE   
+     '[/**]':
+      allowedOrigins:
+       - '*'
+       - 'http://localhost:4200'
+      allowedMethods:
+       - GET
+       - POST
+       - PUT
+       - DELETE 
    routes:
     - id: STO-BACK-ADMINISTRACION
       uri: lb://STO-BACK-ADMINISTRACION
@@ -133,6 +161,34 @@ spring:
  profiles: WEBLOGIC
  cloud:
   gateway:
+   globalcors:
+    cors-configurations:
+     '[/sto-back-configuracion/**]':
+      allowedOrigins:
+       - '*'
+       - 'http://localhost:4200'
+      allowedMethods:
+       - GET
+       - POST
+       - PUT
+     '[/sto-back-administracion/**]':
+      allowedOrigins:
+       - '*'
+       - 'http://localhost:4200'
+      allowedMethods:
+       - GET
+       - POST
+       - PUT
+       - DELETE   
+     '[/**]':
+      allowedOrigins:
+       - '*'
+       - 'http://localhost:4200'
+      allowedMethods:
+       - GET
+       - POST
+       - PUT
+       - DELETE 
    routes:
     - id: STO-BACK-ADMINISTRACION
       uri: lb://STO-BACK-ADMINISTRACION
