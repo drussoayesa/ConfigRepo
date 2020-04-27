@@ -3,6 +3,8 @@
 ################################################################################################################################
 server:
  port: 9002
+ servlet:
+  context-path: ${config.server.context-paths.sto-gateway}
  
 logging:
  file: /usr/local/nuevaarquitecturasto/logs/gateway.log
@@ -22,12 +24,19 @@ eureka:
  client:
   registerWithEureka: true
   fetch-registry: true
+  metadataMap:
+   configPath: ${config.server.context-paths.sto-gateway}
+   appOwner: STO
+   description: Gateway de STO
+ client:
+  registerWithEureka: true
+  fetch-registry: true
 
 # Configuraciones de seguridad
 security:
  oauth2:
   resource:
-   userInfoUri: ${config.endpoint.backautenticacion}/auth/user/me
+   userInfoUri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/user/me
    preferTokenInfo: false
    jwt:
     key-value: '{cipher}63c159452c1099e88f1f681da4e1ac5352bb3cfc43225f3d73bb629c5166b4f6'
@@ -38,13 +47,16 @@ zuul:
   connect-timeout-millis: 50000
   socket-timeout-millis: 50000
  sensitiveHeaders: Cookie,Set-Cookie
+ ignored-headers: Access-Control-Allow-Credentials, Access-Control-Allow-Origin
  routes:
   administracion:
-   path: /administracion/**
+   path: ${config.server.context-paths.sto-back-administracion}/**
    serviceId: STO-BACK-ADMINISTRACION
+   stripPrefix: false
   configuracion:
-   path: /configuracion/**
+   path: ${config.server.context-paths.sto-back-configuracion}/**
    serviceId: STO-BACK-CONFIGURACION
+   stripPrefix: false
    
 ribbon:
    ReadTimeout: 60000
@@ -61,6 +73,11 @@ info:
   java-vendor: ${java.specification.vendor}
   java-version: ${java.vm.name}
 
+config:
+ cors:
+  origins:
+   zuulOrigins: "*"
+   
 ---
 
 ################################################################################################################################
