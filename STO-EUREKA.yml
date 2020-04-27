@@ -6,6 +6,8 @@
 # Puerto por defecto de Eureka
 server:
   port: 8761
+  servlet:
+   context-path: ${config.server.context-paths.sto-eureka}
   
 # Credenciales de seguridad 
 spring:
