@@ -2,9 +2,9 @@
 # Entorno del servidor de DESarrollo
 ################################################################################################################################
 server:
- port: 8082
+ port: 9051
  servlet:
-  context-path: /
+  context-path: ${config.server.context-paths.sto-front-autenticacion}
  session:
   cookie:
    name: UISESSION
@@ -22,6 +22,7 @@ eureka:
   preferIpAddress: true
   virtualHostName: STO-FRONT-AUTENTICACION
   metadataMap:
+   configPath: ${config.server.context-paths.sto-front-autenticacion}
    appOwner: STO
    description: Front de autenticación del STO
    
@@ -31,11 +32,11 @@ security:
   client:
    clientId: stoAuthClientDes
    clientSecret: '{cipher}015d9f900e42352c30a084c8a5c8dd9860909876a31f8b0cb2b19e545d065cc8'
-   accessTokenUri: ${config.endpoint.backautenticacion}/auth/oauth/token
-   userAuthorizationUri: ${config.endpoint.backautenticacion}/auth/oauth/authorize
+   accessTokenUri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/oauth/token
+   userAuthorizationUri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/oauth/authorize
    clientAuthenticationScheme: form
   resource:
-   userInfoUri: ${config.endpoint.backautenticacion}/auth/user/me
+   userInfoUri: ${config.endpoint.backautenticacion}${config.server.context-paths.sto-back-autenticacion}/user/me
    preferTokenInfo: false
    jwt:
     key-value: '{cipher}63c159452c1099e88f1f681da4e1ac5352bb3cfc43225f3d73bb629c5166b4f6'
