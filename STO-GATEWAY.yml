@@ -19,18 +19,13 @@ eureka:
   virtualHostName: STO-GATEWAY
   preferIpAddress: true
   metadataMap:
-   appOwner: STO
-   description: Gateway de STO
- client:
-  registerWithEureka: true
-  fetch-registry: true
-  metadataMap:
    configPath: ${config.server.context-paths.sto-gateway}
    appOwner: STO
    description: Gateway de STO
  client:
   registerWithEureka: true
   fetch-registry: true
+   
 
 # Configuraciones de seguridad
 security:
