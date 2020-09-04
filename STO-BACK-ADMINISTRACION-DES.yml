@@ -24,7 +24,7 @@ spring:
 eureka:
  instance:    
   preferIpAddress: true
-  virtualHostName: STO-BACK-ADMINISTRACION -2
+  virtualHostName: STO-BACK-ADMINISTRACION -4545
   metadataMap:
    configPath: ${config.server.context-paths.sto-back-administracion}
    appOwner: STO
